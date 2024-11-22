@@ -5,76 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <title>포트폴리오</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>128 Apps</title>
   </head>
   <body>
     <header>
       <h1>OneTwoEight Apps</h1>
-      <div class="menu-container">
-        <button class="menu-icon" id="menuButton">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="dropdown-menu" id="dropdownMenu">
-          <a href="#app1">Blocus</a>
-          <a href="#app2">Mindful Minutes</a>
-          <a href="#app3">Quick Scan</a>
-        </div>
-      </div>
     </header>
     <main id="main">
       <section class="portfolio" id="portfolio">
-        <div class="app-item" id="app1">
-          <div class="app-details">
-            <h3>Blocus</h3>
-            <p>할 일을 블록(block)으로 관리하고 한 가지 할 일에 집중해보세요.</p>
-            <div class="store-buttons">
-              <a href="#" class="store-button app-store-button">
-                <i class="fab fa-apple"></i>
-                App Store
-              </a>
-              <a href="#" class="store-button play-store-button">
-                <i class="fab fa-google-play"></i>
-                Google Play
-              </a>
+        <h2 class="section-title">Our Apps</h2>
+        <div class="app-grid">
+          <a href="#" class="app-card" id="app1">
+            <img src="app-icon-blocus.png" alt="Blocus 앱 아이콘" class="app-image" />
+            <div class="app-details">
+              <h3>Blocus</h3>
+              <p>할 일을 블록(block)으로 관리하고 한 가지 할 일에 집중해보세요.</p>
+            </div>
+          </a>
+          <div class="app-card coming-soon">
+            <div class="placeholder-circle">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <div class="app-details">
+              <h3>Coming Soon</h3>
+              <p>새로운 앱을 준비하고 있어요.<br />조금만 기다려주세요!</p>
             </div>
           </div>
-          <img src="app-image1.png" alt="이미지 준비중입니다." class="app-image" />
-        </div>
-
-        <div class="app-item" id="app2">
-          <div class="app-details">
-            <h3>Mindful Minutes</h3>
-            <p>매일 5분의 명상으로 마음의 평화를 찾고 스트레스를 해소하세요.</p>
-            <div class="store-buttons">
-              <a href="#" class="store-button app-store-button">
-                <i class="fab fa-apple"></i>
-                App Store
-              </a>
-              <a href="#" class="store-button play-store-button">
-                <i class="fab fa-google-play"></i>
-                Google Play
-              </a>
-            </div>
-          </div>
-          <img src="app-image2.png" alt="이미지 준비중입니다." class="app-image" />
-        </div>
-
-        <div class="app-item" id="app3">
-          <div class="app-details">
-            <h3>Quick Scan</h3>
-            <p>스마트폰으로 문서를 스캔하고 PDF로 변환하여 언제 어디서나 관리하세요.</p>
-            <div class="store-buttons">
-              <a href="#" class="store-button app-store-button">
-                <i class="fab fa-apple"></i>
-                App Store
-              </a>
-              <a href="#" class="store-button play-store-button">
-                <i class="fab fa-google-play"></i>
-                Google Play
-              </a>
-            </div>
-          </div>
-          <img src="app-image3.png" alt="이미지 준비중입니다." class="app-image" />
         </div>
       </section>
     </main>
@@ -82,36 +40,6 @@
       <p>© <span id="currentYear"></span> OneTwoEight.</p>
     </footer>
     <script>
-      const menuButton = document.getElementById("menuButton");
-      const dropdownMenu = document.getElementById("dropdownMenu");
-      const headerHeight = document.querySelector('header').offsetHeight; // 헤더 높이
-
-      menuButton.addEventListener("click", () => {
-        dropdownMenu.classList.toggle("show");
-      });
-
-      window.addEventListener("click", (e) => {
-        if (!menuButton.contains(e.target)) {
-          dropdownMenu.classList.remove("show");
-        }
-      });
-
-      dropdownMenu.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (e.target.tagName === "A") {
-          const targetId = e.target.getAttribute("href");
-          const targetElement = document.querySelector(targetId);
-          const elementPosition = targetElement.offsetTop - headerHeight;
-
-          window.scrollTo({
-            top: elementPosition,
-            behavior: 'smooth'
-          });
-
-          dropdownMenu.classList.remove("show");
-        }
-      });
-
       document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>
   </body>
