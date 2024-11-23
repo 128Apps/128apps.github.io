@@ -1,3 +1,7 @@
+:root {
+  color-scheme: light;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -128,7 +132,8 @@ footer {
     padding: 20px;
   }
 
-  .app-image, .placeholder-circle {
+  .app-image,
+  .placeholder-circle {
     width: 100px;
     height: 100px;
     border-radius: 25px;
@@ -187,7 +192,8 @@ footer {
     padding: 15px;
   }
 
-  .app-image, .placeholder-circle {
+  .app-image,
+  .placeholder-circle {
     width: 80px;
     height: 80px;
     border-radius: 20px;
@@ -224,46 +230,12 @@ footer {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .app-card {
-    background: #2d3748;
-  }
-
-  .app-card:hover {
-    background: #3a4a61;
-  }
-
-  .app-details h3 {
-    color: #fff;
-  }
-
-  .app-details p {
-    color: #cbd5e0;
-  }
-
-  .dropdown-menu {
-    background: #2d3748;
-  }
-
-  .dropdown-menu a {
-    color: #fff;
-    border-bottom-color: #4a5568;
-  }
-}
-
 .section-title {
   text-align: center;
   font-size: 2.5em;
   color: #2d3748;
   margin-bottom: 40px;
   font-weight: 600;
-}
-
-/* 다크모드 대응 */
-@media (prefers-color-scheme: dark) {
-  .section-title {
-    color: #fff;
-  }
 }
 
 /* 모바일 대응 */
@@ -307,20 +279,4 @@ footer {
 .placeholder-circle i {
   font-size: 3em;
   color: #999;
-}
-
-/* 다크모드 대응 */
-@media (prefers-color-scheme: dark) {
-  .coming-soon {
-    background: linear-gradient(145deg, #2d3748, #2a3441);
-    border-color: #4a5568;
-  }
-
-  .placeholder-circle {
-    background: #2d3748;
-  }
-
-  .placeholder-circle i {
-    color: #718096;
-  }
 }
